@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>Nshimyimana Kevin</h1>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+               
+                </ul>
+                <div class="mobile-nav-toggle">
+                    <button id="theme-toggle-mobile" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                 
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Kevin</h1>
+                    <p class="tagline">Full Stack Web Developer & UI/UX Designer</p>
+                    <p class="description">
+                        I build beautiful, responsive websites and applications with a focus on user experience and clean code.
+                    </p>
+                    <button class="btn primary-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                        See My Projects
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/300" alt="John Doe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (abbreviated) -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                   <img src="imgz/ecomerse.png" alt="">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <button class="btn primary-btn" onclick="window.location.href='#'">Buy Project</button>
+                                <button class="btn secondary-btn" onclick="openProjectModal('ecommerce')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Website</h3>
+                        <p>A fully responsive e-commerce platform with product filtering, cart functionality, and payment integration.</p>
+                    </div>
+                    <div class="project-technology">
+                        <ul>
+                            <li>React for front end </li>
+                            <li>Node js for backend</li>
+                            <li>Mongodb for database</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imgz/feed.png" alt="User Feedback System">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <button class="btn primary-btn" onclick="window.location.href='#'">Buy Project</button>
+                                <button class="btn secondary-btn" onclick="openProjectModal('feedback')">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>User feedback system</h3>
+                        <p>
+                            Feedback system that user sends his/her feedback to admin . It allows admin to login and view all submited feedback easy
+                        </p>
+                    </div>
+                    <div class="project-technology">
+                        <ul>
+                            <li>Html + Bootstrap for front end </li>
+                            <li>Php for backend</li>
+                            <li>Mysql on database</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- More projects would go here -->
+            </div>
+        </div>
+    </section>
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Bachelor's Degree in Computer Science</h3>
+                        <p class="institution">University of Rwanda</p>
+                        <p class="duration">2020 - 2024</p>
+                        <p class="description">
+                            Focused on software development, web technologies, and computer systems. 
+                            Gained expertise in programming, database management, and software engineering principles.
+                        </p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Advanced Diploma in Web Development</h3>
+                        <p class="institution">Rwanda Coding Academy</p>
+                        <p class="duration">2018 - 2020</p>
+                        <p class="description">
+                            Specialized training in full-stack web development, including front-end and back-end technologies.
+                            Hands-on experience with modern web frameworks and development tools.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Applications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+250 793 227 877</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>kizkevin3@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>kevin-250</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h3>Send me a message</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h3>Project Details</h3>
+                    <p id="modalDescription"></p>
+                    <div class="modal-technologies">
+                        <h3>Technologies Used</h3>
+                        <ul id="modalTechnologies"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            
+            function toggleDarkMode() {
+                document.body.classList.toggle('dark-mode');
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', isDarkMode);
+            }
+            
+            function toggleMobileMenu() {
+                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.contains('active');
+                menuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            }
+            
+            // Check for dark mode preference
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            if (themeToggle) themeToggle.addEventListener('click', toggleDarkMode);
+            if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleDarkMode);
+            if (menuToggle) menuToggle.addEventListener('click', toggleMobileMenu);
+        });
+
+        // Project details data
+        const projectDetails = {
+            'ecommerce': {
+                title: 'E-commerce Website',
+                description: 'A fully responsive e-commerce platform with advanced features including product filtering, shopping cart functionality, secure payment integration, and admin dashboard. Built with modern web technologies for optimal performance and user experience.',
+                technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'Stripe API'],
+                image:'imgz/ecomerse.png'
+            },
+            'feedback': {
+                title: 'User Feedback System',
+                description: 'A comprehensive feedback management system that allows users to submit feedback and administrators to efficiently manage and respond to user input. Features include user authentication, feedback categorization, and real-time notifications.',
+                technologies: ['HTML5', 'Bootstrap', 'PHP', 'MySQL', 'JavaScript', 'AJAX'],
+                image:'imgz/feed.png',
+            }
+        };
+
+        function openProjectModal(projectId) {
+            const modal = document.getElementById('projectModal');
+            const project = projectDetails[projectId];
+            
+            document.getElementById('modalTitle').textContent = project.title;
+            document.getElementById('modalDescription').textContent = project.description;
+            document.getElementById('modalImage').src = project.image;
+            
+            const technologiesList = document.getElementById('modalTechnologies');
+            technologiesList.innerHTML = '';
+            project.technologies.forEach(tech => {
+                const li = document.createElement('li');
+                li.textContent = tech;
+                technologiesList.appendChild(li);
+            });
+            
+            modal.style.display = 'block';
+        }
+
+        // Close modal when clicking the close button
+        document.querySelector('.close-modal').onclick = function() {
+            document.getElementById('projectModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
